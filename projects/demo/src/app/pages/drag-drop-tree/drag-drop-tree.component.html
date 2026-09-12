@@ -1,0 +1,18 @@
+<matx-drag-drop-tree [nodes]="nodes" (dropped)="handleDropped($event)" />
+<br />
+
+<matx-drag-drop-tree
+  [nodes]="nodes2"
+  (dropped)="handleDropped2($event)"
+  class="tree"
+>
+  <ng-template #headerTemplate let-data="data" let-childNodes="childNodes">
+    <div (click)="handleClick(data)" class="tree-node">
+      @if (childNodes) {
+        {{ data }}
+      } @else {
+        <em>{{ data }}</em>
+      }
+    </div>
+  </ng-template>
+</matx-drag-drop-tree>

@@ -1,0 +1,16 @@
+<matx-file-tab-container
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="dropTab($event)"
+>
+  @for (tab of tabs(); track `${tab.modificationState}${tab.filename}`) {
+    <matx-file-tab
+      cdkDrag
+      [text]="tab.filename"
+      [selected]="tab === selectedTab()"
+      [modificationState]="tab.modificationState"
+      (tabSelect)="selectTab(tab.filename)"
+      (tabClose)="closeTab(tab.filename)"
+    />
+  }
+</matx-file-tab-container>

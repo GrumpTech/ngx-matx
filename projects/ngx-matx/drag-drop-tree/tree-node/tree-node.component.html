@@ -1,0 +1,78 @@
+<div class="container">
+  <div
+    cdkDropList
+    [cdkDropListData]="{
+      parent: parent(),
+      array: siblings(),
+      index: index() + 1,
+    }"
+    (cdkDropListDropped)="handleDropped($event)"
+    class="drop-after"
+  >
+    <div class="drop-after_border"></div>
+  </div>
+  <div
+    cdkDropList
+    cdkDropListSortingDisabled
+    [cdkDropListData]="
+      siblings()[index()].childNodes
+        ? {
+            parent: siblings()[index()],
+            array: siblings()[index()].childNodes,
+            index: 0,
+          }
+        : { parent: parent(), array: siblings(), index: index() + 1 }
+    "
+    (cdkDropListDropped)="handleDropped($event)"
+  >
+    <div
+      cdkDrag
+      [cdkDragData]="{ parent: parent(), array: siblings(), index: index() }"
+      (cdkDragStarted)="handleDragStarted()"
+      (cdkDragEnded)="handleDragEnded()"
+      class="content"
+    >
+      <ng-container
+        *ngTemplateOutlet="
+          headerTemplate() ? headerTemplate() : defaultHeaderTemplate;
+          context: siblings()[index()]
+        "
+      />
+      <ng-template #defaultHeaderTemplate let-text="text">
+        <div class="header">{{ text || "" }}</div>
+      </ng-template>
+    </div>
+    <div
+      [class]="
+        'drop-after_border' +
+        (siblings()[index()].childNodes ? '' : '--disabled')
+      "
+    ></div>
+  </div>
+  @if (!parent() && !index()) {
+    <div
+      cdkDropList
+      [cdkDropListData]="{ array: siblings(), index: index() }"
+      (cdkDropListDropped)="handleDropped($event)"
+      class="drop-before"
+    >
+      <div class="drop-before_border"></div>
+    </div>
+  }
+  @if (!dragging()) {
+    @for (
+      item of siblings()[index()].childNodes;
+      track trackBy()(i, item);
+      let i = $index
+    ) {
+      <matx-drag-drop-tree-node
+        [headerTemplate]="headerTemplate()"
+        [trackBy]="trackBy()"
+        [parent]="siblings()[index()]"
+        [siblings]="siblings()[index()].childNodes || []"
+        [index]="i"
+        (dropped)="handleDropped($event)"
+      />
+    }
+  }
+</div>

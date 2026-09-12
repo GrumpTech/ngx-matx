@@ -1,0 +1,40 @@
+.tab,
+.tab--selected {
+  display: flex;
+  flex-direction: row;
+  opacity: 0.6;
+  border-bottom: 2px solid transparent;
+  padding-right: 2px;
+}
+.tab--selected {
+  opacity: 0.8;
+  border-bottom-color: black;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.tab:not(:hover) {
+  .close-button {
+    visibility: hidden;
+  }
+}
+
+mat-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+.close-button {
+  border-radius: 4px;
+  transform: scale(0.85);
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+.circle {
+  transform: scale(0.5);
+}
+.add {
+  transform: scale(0.85);
+}

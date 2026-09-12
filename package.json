@@ -1,0 +1,33 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build ngx-matx --configuration production && cp README.md LICENSE dist/ngx-matx",
+    "publish": "cd dist/ngx-matx && npm publish",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "ng lint"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/cdk": "^22.0.3",
+    "@angular/common": "~22.0.5",
+    "@angular/core": "~22.0.5",
+    "@angular/forms": "^22.0.5",
+    "@angular/material": "^22.0.3",
+    "@angular/platform-browser": "~22.0.5",
+    "@angular/router": "~22.0.5",
+    "@grumptech/ngx-basic-ui": "^1.0.8",
+    "file-saver-es": "^2.0.5"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.0.5",
+    "@angular/cli": "~22.0.5",
+    "@angular/compiler-cli": "~22.0.5",
+    "@types/file-saver-es": "^2.0.3",
+    "ng-packagr": "^22.0.1",
+    "prettier": "^3.9.4"
+  }
+}

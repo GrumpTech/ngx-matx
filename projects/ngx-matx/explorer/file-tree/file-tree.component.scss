@@ -1,0 +1,15 @@
+.mat-tree-node {
+  cursor: pointer;
+  min-height: 25px;
+  height: 25px;
+  opacity: 0.8;
+  text-wrap: nowrap;
+}
+
+.tree-button {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+}

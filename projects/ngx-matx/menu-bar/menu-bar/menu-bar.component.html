@@ -1,0 +1,13 @@
+<div matxMenuTriggers [menuClass]="MATX_MENU_CLASS">
+  @for (item of menuBar(); track item) {
+    <button mat-button class="button" [matMenuTriggerFor]="matxMenu.menu()">
+      {{ item.text }}
+    </button>
+    <matx-menu
+      #matxMenu
+      [items]="item.children"
+      (itemClick)="handleClick($event)"
+      [class]="MATX_MENU_CLASS"
+    />
+  }
+</div>

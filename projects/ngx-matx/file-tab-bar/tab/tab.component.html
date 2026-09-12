@@ -1,0 +1,16 @@
+<button
+  mat-button
+  [class]="selected() ? 'tab--selected' : 'tab'"
+  (click)="handleClick($event)"
+  (mouseenter)="handleMouseEnter()"
+  (mouseleave)="handleMouseLeave()"
+>
+  {{ text() }}
+  <mat-icon
+    iconPositionEnd
+    [style.marginLeft]="'2px'"
+    [class]="hovering() ? 'close-button' : buttonTag()"
+    (click)="handleClose()"
+    >{{ buttonTag() }}</mat-icon
+  >
+</button>

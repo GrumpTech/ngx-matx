@@ -1,0 +1,13 @@
+<div>
+  <div cdkDropListGroup class="container">
+    @for (item of nodes(); track trackBy()(i, item); let i = $index) {
+      <matx-drag-drop-tree-node
+        [headerTemplate]="headerTemplate()"
+        [siblings]="nodes()"
+        [index]="i"
+        [trackBy]="trackBy()"
+        (dropped)="handleDropped($event)"
+      />
+    }
+  </div>
+</div>

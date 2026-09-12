@@ -1,0 +1,14 @@
+<matx-menu-bar [menuBar]="menuBar" (itemClick)="handleClick($event)" />
+<matx-editor-app
+  [convertFn]="convertFn"
+  [convertBackFn]="convertBackFn"
+  [onCommand]="onCommand"
+>
+  @for (
+    tab of tabs();
+    track `${tab.modificationState}${tab.filename}`;
+    let index = $index
+  ) {
+    <textarea [hidden]="tab !== selectedTab()"></textarea>
+  }
+</matx-editor-app>

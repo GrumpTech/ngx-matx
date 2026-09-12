@@ -1,0 +1,29 @@
+{
+  "name": "@grumptech/ngx-matx",
+  "version": "1.0.2",
+  "description": "Angular Material components",
+  "author": "GrumpTech",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrumpTech/ngx-matx.git"
+  },
+  "keywords": [
+    "Angular",
+    "Material",
+    "components"
+  ],
+  "bugs": {
+    "url": "https://github.com/GrumpTech/ngx-matx/issues"
+  },
+  "homepage": "https://github.com/GrumpTech/ngx-matx#readme",
+  "peerDependencies": {
+    "@angular/cdk": ">=21.0.0",
+    "@angular/common": ">=21.0.0",
+    "@angular/core": ">=21.0.0",
+    "@angular/forms": ">=21.0.0",
+    "@angular/material": ">=21.0.0",
+    "@grumptech/ngx-basic-ui": "^1.0.5",
+    "file-saver-es": "^2.0.5"
+  }
+}

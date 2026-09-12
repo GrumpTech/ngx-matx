@@ -1,0 +1,11 @@
+<mat-card [class.full-height]="fullHeight()">
+  <mat-card-header>
+    <div class="title" [matxOverflowTooltip]="headerTitle()">
+      {{ headerTitle() }}
+    </div>
+    <ng-content select="matx-panel-header-button" />
+  </mat-card-header>
+  <mat-card-content [class.full-height]="fullHeight()">
+    <ng-content />
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,14 @@
+@use "@grumptech/ngx-basic-ui/thin-scrollbars";
+
+:host {
+  display: flex;
+  @include thin-scrollbars.scrollbars;
+  overflow-y: hidden;
+}
+
+.tabs-container {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}

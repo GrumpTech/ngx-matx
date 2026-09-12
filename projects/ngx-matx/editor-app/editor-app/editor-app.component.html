@@ -1,0 +1,34 @@
+<matx-editor-app-importer
+  [importManager]="importManager()"
+  (imported)="handleImported($event)"
+/>
+<matx-panel class="explorer" headerTitle="Files" [fullHeight]="true">
+  <matx-panel-header-button
+    icon="refresh"
+    tooltip="Refresh"
+    (click)="explorer.refresh()"
+    [selected]="true"
+  />
+  <matx-panel-header-button
+    icon="unfold_less"
+    tooltip="Collapse all"
+    (click)="explorer.collapseAll()"
+    [selected]="true"
+  />
+  <matx-explorer
+    #explorer
+    [extension]="extension()"
+    [selectedFile]="selectedFile()"
+    (fileClick)="selectTabOrOpenFile($event)"
+    (filesLoaded)="addTabOnEmptyFirstLoad($event)"
+  />
+</matx-panel>
+<div class="container">
+  <matx-file-tab-bar
+    (tabSelect)="selectTab($event)"
+    (tabClose)="tryCloseTab($event)"
+  />
+  <div class="editor-container">
+    <ng-content></ng-content>
+  </div>
+</div>
