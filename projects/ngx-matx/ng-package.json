@@ -3,5 +3,8 @@
   "dest": "../../dist/ngx-matx",
   "lib": {
     "entryFile": "index.ts"
-  }
+  },
+  "allowedNonPeerDependencies": [
+    "file-saver-es"
+  ]
 }

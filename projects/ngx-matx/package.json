@@ -1,6 +1,6 @@
 {
   "name": "@grumptech/ngx-matx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Angular Material components",
   "author": "GrumpTech",
   "license": "SEE LICENSE IN LICENSE",
@@ -23,7 +23,9 @@
     "@angular/core": ">=21.0.0",
     "@angular/forms": ">=21.0.0",
     "@angular/material": ">=21.0.0",
-    "@grumptech/ngx-basic-ui": "^1.0.5",
+    "@grumptech/ngx-basic-ui": "^1.0.8"
+  },
+  "dependencies": {
     "file-saver-es": "^2.0.5"
   }
 }
