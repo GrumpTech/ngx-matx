@@ -7,6 +7,13 @@ export const routes: Routes = [
       import('./pages/main/main.component').then((m) => m.MainPage),
   },
   {
+    path: 'code-editor',
+    loadComponent: () =>
+      import('./pages/code-editor/code-editor.component').then(
+        (m) => m.CodeEditorPage,
+      ),
+  },
+  {
     path: 'drag-drop-tree',
     loadComponent: () =>
       import('./pages/drag-drop-tree/drag-drop-tree.component').then(

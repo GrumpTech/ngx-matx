@@ -50,7 +50,10 @@ export class MatxFileTab {
       (selected) =>
         selected &&
         elementRef.nativeElement.scrollIntoView &&
-        elementRef.nativeElement.scrollIntoView(),
+        elementRef.nativeElement.scrollIntoView({
+          block: 'nearest',
+          inline: 'nearest',
+        }),
     );
   }
 

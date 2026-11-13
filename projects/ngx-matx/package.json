@@ -1,9 +1,9 @@
 {
   "name": "@grumptech/ngx-matx",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Angular Material components",
   "author": "GrumpTech",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GrumpTech/ngx-matx.git"
@@ -22,8 +22,7 @@
     "@angular/common": ">=21.0.0",
     "@angular/core": ">=21.0.0",
     "@angular/forms": ">=21.0.0",
-    "@angular/material": ">=21.0.0",
-    "@grumptech/ngx-basic-ui": "^1.0.8"
+    "@angular/material": ">=21.0.0"
   },
   "dependencies": {
     "file-saver-es": "^2.0.5"

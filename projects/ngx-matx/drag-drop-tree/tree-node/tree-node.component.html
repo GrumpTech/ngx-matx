@@ -35,11 +35,11 @@
       <ng-container
         *ngTemplateOutlet="
           headerTemplate() ? headerTemplate() : defaultHeaderTemplate;
-          context: siblings()[index()]
+          context: { item: siblings()[index()] }
         "
       />
-      <ng-template #defaultHeaderTemplate let-text="text">
-        <div class="header">{{ text || "" }}</div>
+      <ng-template #defaultHeaderTemplate let-item="item">
+        <div class="header">{{ item.text || "" }}</div>
       </ng-template>
     </div>
     <div

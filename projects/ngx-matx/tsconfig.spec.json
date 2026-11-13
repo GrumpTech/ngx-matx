@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.lib.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/spec",
+    "target": "es2022",
+    "useDefineForClassFields": false,
+    "types": ["jasmine"]
+  },
+  "include": ["**/*.spec.ts", "**/*.d.ts", "test.ts"],
+  "exclude": []
+}

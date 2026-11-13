@@ -1,0 +1,15 @@
+@use "@grumptech/ngx-matx/thin-scrollbars";
+
+.scroll-area {
+  max-height: 14rem;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  @include thin-scrollbars.scrollbars;
+
+  pre {
+    width: max-content;
+    min-width: 100%;
+    margin: 0;
+  }
+}

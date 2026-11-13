@@ -2,23 +2,25 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": "./projects",
+    "rootDir": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "types": ["jasmine", "node"],
     "sourceMap": true,
     "declaration": false,
     "paths": {
-      "@grumptech/ngx-matx/*": ["./projects/ngx-matx/*"]
+      "@grumptech/ngx-matx/*": ["./projects/ngx-matx/*"],
+      "@ng-doc/generated": ["./ng-doc/docs/index.ts"],
+      "@ng-doc/generated/*": ["./ng-doc/docs/*"]
     },
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "importHelpers": true,
-    "target": "es2022",
     "module": "es2022",
     "lib": ["es2022", "dom"]
   }

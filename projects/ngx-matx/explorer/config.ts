@@ -6,6 +6,7 @@ import {
   MATX_EXPLORER_FILE_SERVICE_URL,
   MATX_EXPLORER_LOCAL_STORAGE_PREFIX,
 } from './constants';
+import { TemporaryStorage } from './file-service/temporary-storage';
 
 export function provideExplorer(fileServiceUrl: string): Provider {
   return [
@@ -21,4 +22,8 @@ export function provideLocalStorageExplorer(
     { provide: IFileService, useClass: LocalStorage },
     { provide: MATX_EXPLORER_LOCAL_STORAGE_PREFIX, useValue: prefix },
   ];
+}
+
+export function provideTemporaryStorageExplorer(): Provider {
+  return [{ provide: IFileService, useClass: TemporaryStorage }];
 }

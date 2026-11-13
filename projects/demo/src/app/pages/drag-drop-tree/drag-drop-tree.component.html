@@ -6,12 +6,12 @@
   (dropped)="handleDropped2($event)"
   class="tree"
 >
-  <ng-template #headerTemplate let-data="data" let-childNodes="childNodes">
-    <div (click)="handleClick(data)" class="tree-node">
-      @if (childNodes) {
-        {{ data }}
+  <ng-template #headerTemplate let-item="item">
+    <div (click)="handleClick(item.title)" class="tree-node">
+      @if (item.childNodes) {
+        {{ item.data }}
       } @else {
-        <em>{{ data }}</em>
+        <em>{{ item.data }}</em>
       }
     </div>
   </ng-template>

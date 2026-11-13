@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/* Hide the dark-mode action and action shortcut hints in the palette preview. */
+ng-doc-command-palette
+  .ng-doc-command-palette-row[data-ng-doc-type="action"]:has(
+    .ng-doc-command-palette-label > span:empty
+  ) {
+  display: none;
+}
+ng-doc-command-palette
+  .ng-doc-command-palette-preview
+  .ng-doc-command-palette-hint {
+  display: none;
+}
+ng-doc-command-palette
+  .ng-doc-command-palette-group:has([data-ng-doc-type="action"])
+  .ng-doc-command-palette-count {
+  display: none;
+}

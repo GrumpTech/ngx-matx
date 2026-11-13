@@ -45,3 +45,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+# NgDoc files
+/ng-doc
+
+# NgDoc cache
+/.cache/ng-doc

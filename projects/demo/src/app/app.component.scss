@@ -1,4 +1,4 @@
-@use "@grumptech/ngx-basic-ui/thin-scrollbars";
+@use "@grumptech/ngx-matx/thin-scrollbars";
 
 :host {
   height: 100%;
@@ -29,7 +29,7 @@ mat-toolbar a {
   min-height: 0;
 }
 
-b-navigation {
+app-navigation {
   width: 300px;
   height: 100%;
   border-right: 1px solid grey;

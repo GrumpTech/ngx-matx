@@ -1,0 +1,25 @@
+<nav>
+  <div class="container">
+    @for (item of menuItems; track item) {
+      @if (item.url) {
+        <a
+          [style.paddingLeft.px]="item.level * 10 + 10"
+          [relativeTo]="relativeTo()"
+          [routerLink]="urlPrefix() + item.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{
+            matrixParams: 'ignored',
+            queryParams: 'ignored',
+            paths: 'exact',
+            fragment: 'ignored',
+          }"
+          >{{ item.name }}</a
+        >
+      } @else {
+        <div [style.paddingLeft.px]="item.level * 10 + 10" disabled>
+          {{ item.name }}
+        </div>
+      }
+    }
+  </div>
+</nav>
