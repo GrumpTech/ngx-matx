@@ -8,7 +8,7 @@
     "build:docs": "ng build docs --configuration production",
     "publish": "cd dist/ngx-matx && npm publish",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test ngx-matx --watch=false",
+    "test": "ng test ngx-matx --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint"
   },
   "private": true,
