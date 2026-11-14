@@ -14,6 +14,17 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script>
+      const redirect = sessionStorage.getItem('grumptech_website_redirect');
+      sessionStorage.removeItem('grumptech_website_redirect');
+      if (
+        redirect &&
+        redirect.startsWith(document.baseURI) &&
+        redirect !== location.href
+      ) {
+        history.replaceState(null, '', redirect);
+      }
+    </script>
   </head>
   <body>
     <app-root></app-root>

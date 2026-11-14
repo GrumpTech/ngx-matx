@@ -84,6 +84,11 @@ export default ({ mode }) => {
       outDir: workspace("dist/docs/browser"),
       emptyOutDir: true,
       sourcemap: settings.sourcemap,
+      rolldownOptions: {
+        output: {
+          chunkFileNames: "assets/chunk-[hash].js",
+        },
+      },
     },
   };
 };
